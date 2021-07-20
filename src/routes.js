@@ -5,7 +5,7 @@ export default function Routes(){
 	return(
 	<BrowserRouter>
 		<Route exact path="/" component={Home}/>
-		<Route exact path="/" component={SearchPage}/>
+		<Route exact path="/search/:user" component={SearchPage}/>
 	</BrowserRouter>
 	);
 }
