@@ -7,7 +7,12 @@ export default function Home(){
 	return(
 	<Search 
 		onSearch={user =>{
-			history.push(`/search/${user}`)
+			if(user.trim() !== ''){
+				history.push(`/search/${user}`)
+				return true
+			}else{
+				return 'error'
+			}
 		}}
 	/>
 	);
