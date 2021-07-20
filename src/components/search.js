@@ -3,12 +3,22 @@ import { Button, TextField } from '@material-ui/core';
 
 export default function Search({onSearch}){
 	const [user, setUser] = React.useState("")
+	const [error, setError] = React.useState(false)
 
 	function handleChange(event){
 		const target = event.target
 		const value = target.value
 
 		setUser(value)
+	}
+
+	function handleError(){
+		const _3seconds = 3000
+
+		setError(true)
+		setTimeout(()=>{
+			setError(false)
+		}, _3seconds)
 	}
 
 	return(
@@ -24,10 +34,15 @@ export default function Search({onSearch}){
 				onChange={event=>{
 					handleChange(event)
 				}}
+				error={error}
+				helperText="Entrada inválida"
 			/>
 		</div>
 		<Button variant="primary" onClick={() =>{
-			onSearch(user)
+			const response = onSearch(user)
+
+			if(response === 'error')
+				handleError()
 		}}>
 			Pesquisar
 		</Button>	
