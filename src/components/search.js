@@ -38,7 +38,7 @@ export default function Search({onSearch}){
 				helperText="Entrada inválida"
 			/>
 		</div>
-		<Button variant="primary" onClick={() =>{
+		<Button variant="contained" color="primary" onClick={() =>{
 			const response = onSearch(user)
 
 			if(response === 'error')
