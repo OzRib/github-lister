@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, FormControl } from 'react-bootstrap';
+import { Button, TextField } from '@material-ui/core';
 
 export default function Search({onSearch}){
 	const [user, setUser] = React.useState("")
@@ -14,11 +14,12 @@ export default function Search({onSearch}){
 	return(
 	<React.Fragment>
 		<div className="search">
-			<FormControl
+			<TextField
 				id="search-input"
-				name="search-input"
-				type="text"
-				placeholder="Digite aqui o nome do usuário"
+				name="search"
+				label="Pesquisar usuário"
+				variant="filled"
+				color="primary"
 				value={user}
 				onChange={event=>{
 					handleChange(event)
