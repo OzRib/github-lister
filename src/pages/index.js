@@ -1,7 +1,7 @@
 import Home from './home';
-import SearchPage from './search-page';
+import RepositoriesPage from './repositories-page';
 
 export {
 	Home,
-	SearchPage
+	RepositoriesPage
 };
