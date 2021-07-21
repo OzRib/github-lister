@@ -28,6 +28,13 @@
 	align-items:center;
 }
 
+.repositories-header{
+	padding: 2vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
 .rounded {
 	border-radius: 100%;
 }
