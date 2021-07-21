@@ -1,5 +1,5 @@
-import Search from '../components/search';
 import React from 'react';
+import { Search, Logo } from '../components';
 import { useHistory } from 'react-router-dom';
 
 export default function Home(){
@@ -7,6 +7,7 @@ export default function Home(){
 
 	return(
 	<React.Fragment>
+		<Logo/>
 		<Search 
 			onSearch={user =>{
 				if(user.trim() !== ''){
