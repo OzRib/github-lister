@@ -27,7 +27,6 @@ const themes = {
 function App({classes}) {
 	return (
 	<div className={"App "+classes.dark}>
-		<Header/>
 		<Routes/>
 	</div>
 	);
