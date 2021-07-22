@@ -95,6 +95,10 @@
 .modal-title {}
 
 @media (max-width: 959px){
+	.repositories {
+		height: 14rem;
+	}
+
 	.repository-tablecell {
 		font-size: 13px !important;
 		word-wrap: break-word !important;
