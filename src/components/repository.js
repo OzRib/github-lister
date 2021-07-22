@@ -56,7 +56,7 @@ export default function Repository({repository,  onDetails}){
 						color="primary"
 						href={html_url}
 					>
-						Ver repositório
+						Mais
 					</Button>
 				</CardActions>
 			</CardActionArea>
