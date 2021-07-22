@@ -8,7 +8,7 @@ import {
 	Typography
 } from '@material-ui/core';
 
-export default function Repository({repository}){
+export default function Repository({repository,  onDetails}){
 	const {
 		name,
 		description,
@@ -43,6 +43,11 @@ export default function Repository({repository}){
 					<Button
 						variant="contained"
 						color="primary"
+						onClick={()=>{
+
+							if(onDetails)
+								onDetails(repository)
+						}}
 					>
 						Detalhes
 					</Button>
