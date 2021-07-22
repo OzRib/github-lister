@@ -95,6 +95,10 @@
 .modal-title {}
 
 @media (max-width: 959px){
+	.userdata-table {
+		height: auto;
+	}
+
 	.repositories {
 		height: 14rem;
 	}
