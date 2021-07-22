@@ -10,7 +10,7 @@ import {
 
 export default function Repository({repository}){
 	const {
-		full_name,
+		name,
 		description,
 		html_url
 	} = repository
@@ -24,8 +24,13 @@ export default function Repository({repository}){
 		>
 			<CardActionArea>
 				<CardContent>
-					<Typography variant="h5" component="h2">
-						{full_name}
+					<Typography 
+						variant="h6"
+						style={{
+							wordWrap: 'break-word'
+						}}
+					>
+						{name}
 					</Typography>
 					<Typography variant="body2" color="textSecondary">
 						{description === null?
