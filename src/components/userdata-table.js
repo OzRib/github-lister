@@ -8,14 +8,7 @@ import {
 
 export default function UserdataTable({data}){
 	return(
-	<div
-		style={{
-			overflow: 'scroll',
-			overflowX: 'hidden',
-			overflowY: 'auto',
-			height: '24.1rem'
-		}}
-	>
+	<div className="scrollable userdata-table">
 		<TableContainer>
 			<Table>
 				<TableBody>
