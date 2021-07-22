@@ -3,18 +3,19 @@ import { Repository } from './';
 
 export default function Repositories({repositories}){
 	return(
-	<div
-		style={{
-			overflow: 'scroll',
-			overflowX: 'hidden',
-			overflowY: 'auto',
-			height: '36rem',
-			width: '90%'
-		}}
-	>
-		{repositories.map((repository, key)=>(
-		<Repository repository={repository} key={key}/>
-		))}
-	</div>
+	<React.Fragment>
+		<div className="scrollable repositories">
+			{repositories.map((repository, key)=>(
+			<Repository 
+				repository={repository} 
+				key={key}
+				onDetails={repository =>{
+					setRepository(repository)
+					setShow(true)
+				}}
+			/>
+			))}
+		</div>
+	</React.Fragment>
 	);
 }
