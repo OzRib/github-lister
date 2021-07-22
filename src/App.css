@@ -42,6 +42,10 @@
 	width: 90%;
 }
 
+.userdata-table {
+	height: 26rem;
+}
+
 .rounded {
 	border-radius: 100%;
 }
