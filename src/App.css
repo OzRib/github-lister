@@ -70,6 +70,14 @@
 	width: 80%;
 }
 
+.modal-header {
+	padding-top: 2%;
+	display: flex;
+	flex-direction: row;
+	width: 90%;
+	justify-content: space-between;
+}
+
 .App-link {
 	color: #61dafb;
 }
