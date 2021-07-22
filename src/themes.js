@@ -38,10 +38,20 @@ const tableStyles = {
 	}
 }
 
+const errorStyles = {
+	'& .MuiFormLabel-root.Mui-error': {
+		color: '#F44336 !important',
+	},
+	'& .Mui-error.MuiFilledInput-underline:after': {
+		borderBottomColor: '#F44336 !important'
+	}
+}
+
 const themes = {
 	dark: {
 		backgroundColor: '#282c34',
 		color: 'white',
+		...errorStyles,
 		...formStyles.dark,
 		...inputStyles.dark,
 		...buttonStyles.dark,
