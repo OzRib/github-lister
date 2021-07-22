@@ -35,6 +35,13 @@
 	align-items: center;
 }
 
+.scrollable {
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: 90%;
+}
+
 .rounded {
 	border-radius: 100%;
 }
