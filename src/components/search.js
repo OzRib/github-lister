@@ -35,7 +35,11 @@ export default function Search({onSearch}){
 					handleChange(event)
 				}}
 				error={error}
-				helperText="Entrada inválida"
+				helperText={error ?
+					"Entrada inválida":
+					(<React.Fragment>
+						&nbsp;
+					</React.Fragment>)}
 			/>
 		</div>
 		<Button variant="contained" color="primary" onClick={() =>{
