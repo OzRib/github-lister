@@ -48,10 +48,12 @@ const errorStyles = {
 }
 
 const themes = {
+	root: {
+		...errorStyles
+	},
 	dark: {
 		backgroundColor: '#282c34',
 		color: 'white',
-		...errorStyles,
 		...formStyles.dark,
 		...inputStyles.dark,
 		...buttonStyles.dark,

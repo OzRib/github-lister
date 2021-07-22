@@ -6,7 +6,7 @@ import themes from './themes';
 
 function App({classes}) {
 	return (
-	<div className={"App "+classes.dark}>
+	<div className={"App "+classes.dark+" "+classes.root}>
 		<Routes/>
 	</div>
 	);
