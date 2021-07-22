@@ -89,3 +89,11 @@
 .App-link {
 	color: #61dafb;
 }
+
+.modal-title {}
+
+@media (max-width: 959px){
+	.modal-title {
+		font-size: 16px !important;
+	}
+}
