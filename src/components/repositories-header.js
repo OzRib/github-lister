@@ -9,6 +9,7 @@ export default function RepositoriesHeader({username}){
 	<div className="repositories-header">
 		<IconButton 
 			color="inherit"
+			edge="start"
 			onClick={()=>{
 				history.goBack()
 			}}
