@@ -13,6 +13,9 @@ export default function RepositoriesPage({match:{params}}){
 	const [userdata, setUserdata] = React.useState({})
 	const [repositories, setRepositories] = React.useState([])
 
+	const width = window.innerWidth
+	const [maxLogo, setMaxLogo] = React.useState(width >= 440)
+
 	async function searchUser(name){
 		const user = await axios.get(`https://api.github.com/users/${encodeURIComponent(name)}`)
 		setUserdata(user.data)
@@ -22,6 +25,11 @@ export default function RepositoriesPage({match:{params}}){
 	}
 
 	React.useEffect(()=>{
+		window.addEventListener('resize', event =>{
+			const width = event.target.innerWidth
+
+			setMaxLogo(width >= 440)
+		})
 		searchUser(username)
 	},[username])
 
@@ -39,7 +47,9 @@ export default function RepositoriesPage({match:{params}}){
 				/>	
 			</Grid>
 			<Grid item>
-				<Logo/>
+				<Logo
+					maxLogo={maxLogo}
+				/>
 			</Grid>
 		</Grid>
 		<Grid container spacing={0}>
