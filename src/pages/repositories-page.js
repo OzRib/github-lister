@@ -1,6 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import { Grid } from '@material-ui/core';
+import { 
+	Grid,
+	Typography
+} from '@material-ui/core';
 import { 
 	Logo, 
 	TurnBack,
@@ -12,6 +15,7 @@ export default function RepositoriesPage({match:{params}}){
 	const username = params.user
 	const [userdata, setUserdata] = React.useState({})
 	const [repositories, setRepositories] = React.useState([])
+	const [error, setError] = React.useState(false)
 
 	const width = window.innerWidth
 	const [maxLogo, setMaxLogo] = React.useState(width >= 440)
@@ -19,11 +23,15 @@ export default function RepositoriesPage({match:{params}}){
 	async function searchUser(name){
 		const filteredName = name.trim()
 
-		const user = await axios.get(`https://api.github.com/users/${encodeURIComponent(filteredName)}`)
-		setUserdata(user.data)
+		try{
+			const user = await axios.get(`https://api.github.com/users/${encodeURIComponent(filteredName)}`)
+			setUserdata(user.data)
 
-		const repos = await axios.get(`https://api.github.com/users/${filteredName}/repos`)
-		setRepositories(repos.data)
+			const repos = await axios.get(`https://api.github.com/users/${filteredName}/repos`)
+			setRepositories(repos.data)
+		}catch(error){
+			setError(true)
+		}
 	}
 
 	React.useEffect(()=>{
@@ -54,6 +62,7 @@ export default function RepositoriesPage({match:{params}}){
 				/>
 			</Grid>
 		</Grid>
+		{!error &&
 		<Grid container spacing={0}>
 			<Grid 
 				item 
@@ -75,7 +84,14 @@ export default function RepositoriesPage({match:{params}}){
 			>
 				<Repositories repositories={repositories}/>
 			</Grid>
-		</Grid>
+		</Grid>}
+		{error &&
+		<Typography 
+			variant="h5"
+			className="user-notfound"
+		>
+			Usuário não encontrado
+		</Typography>}		
 	</React.Fragment>
 	);
 }
