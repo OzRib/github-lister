@@ -94,6 +94,17 @@
 	color: #61dafb;
 }
 
+.credits {
+	position: absolute;
+	top: 85%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	font-size: calc(1px + 2vmin);
+}
+
 .repository-tablecell {}
 
 .modal-title {}

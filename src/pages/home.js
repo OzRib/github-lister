@@ -1,6 +1,7 @@
 import React from 'react';
 import { Search, Logo } from '../components';
 import { useHistory } from 'react-router-dom';
+import { Icon } from '@material-ui/core';
 
 export default function Home(){
 	const history = useHistory()
@@ -20,6 +21,27 @@ export default function Home(){
 				}
 			}}
 		/>
+		<div className="credits">
+			<div>
+				<b>Created by:</b>&nbsp;
+				<i>Ozeias Ribeiro</i>
+			</div>
+			<div
+				style={{
+					display: 'flex',
+					alignItems: 'center'
+				}}
+			>
+				Made with love
+				<Icon
+					style={{
+						color: 'red'
+					}}
+				>
+					favorite
+				</Icon>
+			</div>
+		</div>
 	</React.Fragment>
 	);
 }
