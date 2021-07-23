@@ -1,3 +1,5 @@
+import React from 'react';
+import { ThemeContext } from '../providers/theme';
 import {
 	Button,
 	Modal,
@@ -6,16 +8,18 @@ import {
 	Paper,
 	Typography
 } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import { RepositorydataTable } from './';
 import CloseIcon from '@material-ui/icons/Close';
+import themes from '../themes';
 
-export default function RepositoriesModal({
+function RepositoriesModal({
 	repository,
 	show,
+	classes,
 	...props
 }){
-	console.log(repository)
-
+	const [theme] = React.useContext(ThemeContext)
 	const {
 		name,
 		full_name,
@@ -50,7 +54,9 @@ export default function RepositoriesModal({
 		}}
 	>
 		<Fade in={show}>
-			<Paper className="modal-container">
+			<Paper 
+				className={"modal-container "+classes[theme]}
+			>
 				<div className="modal-header">
 					<Typography 
 						variant="h6"
@@ -82,3 +88,5 @@ export default function RepositoriesModal({
 	</Modal>
 	);
 }
+
+export default withStyles(themes)(RepositoriesModal);
