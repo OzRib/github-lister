@@ -7,7 +7,9 @@ export default function Home(){
 
 	return(
 	<React.Fragment>
-		<Logo/>
+		<div className="header">
+			<Logo/>
+		</div>
 		<Search 
 			onSearch={user =>{
 				if(user.trim() !== ''){
