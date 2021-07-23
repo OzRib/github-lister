@@ -7,13 +7,15 @@ const formStyles = {
 }
 
 const inputStyles = {
-	dark:{
+	root: {
 		'& .MuiFilledInput-underline:before': {
 			borderBottomColor: 'green'
 		},
 		'& .MuiFilledInput-underline:after': {
 			borderBottomColor: 'darkgreen'
-		},
+		}
+	},
+	dark:{
 		'& .MuiFilledInput-root': {
 			color: 'white',
 			backgroundColor: '#FFFFFF28'
@@ -49,7 +51,8 @@ const errorStyles = {
 
 const themes = {
 	root: {
-		...errorStyles
+		...errorStyles,
+		...inputStyles.root
 	},
 	dark: {
 		backgroundColor: '#282c34',
