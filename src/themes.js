@@ -49,19 +49,31 @@ const errorStyles = {
 	}
 }
 
+const headerStyles = {
+	light: {
+		'& .header': {
+			backgroundColor: 'cornflowerblue'
+		}
+	},
+	dark: {
+		'& .header': {
+			backgroundColor: '#424048'
+		}
+	}
+}
+
 const themes = {
 	root: {
 		...errorStyles,
 		...inputStyles.root
 	},
 	light: {
+		...headerStyles.light,
 	},
 	dark: {
 		backgroundColor: '#282c34',
 		color: 'white',
-		'& .header': {
-			backgroundColor: '#424048'
-		},
+		...headerStyles.dark,
 		...formStyles.dark,
 		...inputStyles.dark,
 		...buttonStyles.dark,
