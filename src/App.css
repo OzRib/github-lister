@@ -103,6 +103,12 @@ a:hover {
 	margin: 12rem;
 }
 
+.user-notfound {
+	position: absolute;
+	top: 50%;
+	color: #F44336; 
+}
+
 .credits {
 	position: absolute;
 	top: 85%;
