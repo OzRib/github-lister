@@ -62,6 +62,20 @@ const headerStyles = {
 	}
 }
 
+const paperStyles = {
+	light: {
+		'& .MuiPaper-root': {
+			backgroundColor: '#FAFAFA'
+		}
+	},
+	dark: {
+		'& .MuiPaper-root': {
+			color: 'white',
+			backgroundColor: '#0d1117'
+		}
+	}
+}
+
 const themes = {
 	root: {
 		...errorStyles,
@@ -69,6 +83,7 @@ const themes = {
 	},
 	light: {
 		...headerStyles.light,
+		...paperStyles.light
 	},
 	dark: {
 		backgroundColor: '#282c34',
