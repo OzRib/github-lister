@@ -2,11 +2,11 @@ import React from 'react';
 import { Icon, IconButton } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 
-export default function RepositoriesHeader({username}){
+export default function TurnBack({username}){
 	const history = useHistory()
 
 	return(
-	<div className="repositories-header">
+	<div className="turn-back">
 		<IconButton 
 			color="inherit"
 			edge="start"

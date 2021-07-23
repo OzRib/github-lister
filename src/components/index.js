@@ -1,6 +1,6 @@
 import Logo from './logo';
 import Search from './search';
-import RepositoriesHeader from './repositories-header';
+import TurnBack from './turn-back';
 import User from './user';
 import Repositories from './repositories';
 import Repository from './repository';
@@ -11,7 +11,7 @@ import RepositorydataTable from './repositorydata-table';
 export {
 	Search,
 	Logo,
-	RepositoriesHeader,
+	TurnBack,
 	User,
 	Repositories,
 	Repository,

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Grid } from '@material-ui/core';
 import { 
 	Logo, 
-	RepositoriesHeader, 
+	TurnBack,
 	User,
 	Repositories
 } from '../components';
@@ -33,7 +33,7 @@ export default function RepositoriesPage({match:{params}}){
 			justifyContent="space-between"
 		>
 			<Grid item>
-				<RepositoriesHeader
+				<TurnBack
 					username={username}
 				/>	
 			</Grid>
