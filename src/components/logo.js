@@ -13,13 +13,16 @@ export default function Logo(){
 
 	return(
 	<div className="App-logo">
-		{maxLogo && 'Github Lister'}
-		{Array(7).fill(null).map((obj, key)=>(
+		{maxLogo && 
+		<React.Fragment>
+			Github Lister
+			{Array(7).fill(null).map((obj, key)=>(
 			<React.Fragment
 				key={key}
 			>
 				&nbsp;
 			</React.Fragment>))}
+		</React.Fragment>}
 		<img
 			alt="octocat logo"
 			className="rounded"
