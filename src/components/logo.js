@@ -26,6 +26,7 @@ export default function Logo({maxLogo=true}){
 	return(
 	<div className="App-logo">
 		<IconButton
+			color="inherit"
 			onClick={()=>{
 				const light = theme === 'light'
 				if(light){
