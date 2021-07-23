@@ -90,8 +90,13 @@
 	height: 60vh;
 }
 
-.App-link {
+a {
 	color: #61dafb;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 .credits {
