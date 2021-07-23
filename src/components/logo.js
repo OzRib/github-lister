@@ -1,16 +1,6 @@
 import React from 'react';
 
-export default function Logo(){
-	const width = window.innerWidth
-
-	const [maxLogo, setMaxLogo] = React.useState(width >= 440)
-
-	window.addEventListener('resize', event =>{
-		const width = event.target.innerWidth
-
-		setMaxLogo(width >= 440)
-	})
-
+export default function Logo({maxLogo=true}){
 	return(
 	<div className="App-logo">
 		{maxLogo && 
