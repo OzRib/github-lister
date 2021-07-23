@@ -9,7 +9,7 @@ https://user-images.githubusercontent.com/73843439/126822992-6247c0e3-9bea-491d-
 # What it has been built? 
 
 I built this website to a pratical test of an intership vacance.
-The objective is evicence my potential with this tecnology.
+The objective is evidence my potential with this tecnology.
 When I built somenting, I built the best I can.
 
 # How to access? 
