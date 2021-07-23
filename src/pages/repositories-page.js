@@ -17,10 +17,12 @@ export default function RepositoriesPage({match:{params}}){
 	const [maxLogo, setMaxLogo] = React.useState(width >= 440)
 
 	async function searchUser(name){
-		const user = await axios.get(`https://api.github.com/users/${encodeURIComponent(name)}`)
+		const filteredName = name.trim()
+
+		const user = await axios.get(`https://api.github.com/users/${encodeURIComponent(filteredName)}`)
 		setUserdata(user.data)
 
-		const repos = await axios.get(`https://api.github.com/users/${name}/repos`)
+		const repos = await axios.get(`https://api.github.com/users/${filteredName}/repos`)
 		setRepositories(repos.data)
 	}
 
