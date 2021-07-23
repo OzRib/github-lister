@@ -1,8 +1,5 @@
 import React from 'react';
-import { 
-	Paper,
-	Avatar
-} from '@material-ui/core';
+import { Avatar} from '@material-ui/core';
 import { UserdataTable } from './';
 
 export default function User({userdata}){
