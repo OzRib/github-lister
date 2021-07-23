@@ -76,6 +76,14 @@ const paperStyles = {
 	}
 }
 
+const typographyStyles = {
+	dark: {
+		'& .MuiTypography-colorTextSecondary': {
+			color: 'lightgray'
+		}
+	}
+}
+
 const themes = {
 	root: {
 		...errorStyles,
@@ -92,7 +100,9 @@ const themes = {
 		...formStyles.dark,
 		...inputStyles.dark,
 		...buttonStyles.dark,
-		...tableStyles.dark
+		...tableStyles.dark,
+		...paperStyles.dark,
+		...typographyStyles.dark
 	}
 }
 
