@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { 
 	Grid,
+	CircularProgress,
 	Typography
 } from '@material-ui/core';
 import { 
@@ -15,6 +16,7 @@ export default function RepositoriesPage({match:{params}}){
 	const username = params.user
 	const [userdata, setUserdata] = React.useState({})
 	const [repositories, setRepositories] = React.useState([])
+	const [loaded, setLoaded] = React.useState(false)
 	const [error, setError] = React.useState(false)
 
 	const width = window.innerWidth
@@ -32,6 +34,7 @@ export default function RepositoriesPage({match:{params}}){
 		}catch(error){
 			setError(true)
 		}
+		setLoaded(true)
 	}
 
 	React.useEffect(()=>{
@@ -72,7 +75,14 @@ export default function RepositoriesPage({match:{params}}){
 				direction="column"
 				alignItems="center"
 			>
-				<User userdata={userdata}/>
+				{loaded && 
+				<User userdata={userdata}/>}
+				{!loaded &&
+				<CircularProgress 
+					color="primary"
+					className="loading"
+				/>}
+
 			</Grid>
 			<Grid
 				item
@@ -82,7 +92,13 @@ export default function RepositoriesPage({match:{params}}){
 				direction="column"
 				alignItems="center"
 			>
-				<Repositories repositories={repositories}/>
+				{loaded &&
+					<Repositories repositories={repositories}/>}
+				{!loaded &&
+				<CircularProgress 
+					color="primary"
+					className="loading"
+				/>}
 			</Grid>
 		</Grid>}
 		{error &&
