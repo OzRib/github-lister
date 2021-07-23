@@ -54,6 +54,9 @@ const themes = {
 	dark: {
 		backgroundColor: '#282c34',
 		color: 'white',
+		'& .header': {
+			backgroundColor: '#424048'
+		},
 		...formStyles.dark,
 		...inputStyles.dark,
 		...buttonStyles.dark,
