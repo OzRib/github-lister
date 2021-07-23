@@ -25,7 +25,8 @@ export default function User({userdata}){
 	<React.Fragment>
 		<Avatar src={avatar_url} style={{
 			height: '8rem',
-			width: '8rem'
+			width: '8rem',
+			margin: '4%'
 		}}/>
 		{name}
 		<UserdataTable data={formData}/>
