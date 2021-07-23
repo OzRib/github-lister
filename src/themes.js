@@ -54,6 +54,8 @@ const themes = {
 		...errorStyles,
 		...inputStyles.root
 	},
+	light: {
+	},
 	dark: {
 		backgroundColor: '#282c34',
 		color: 'white',
