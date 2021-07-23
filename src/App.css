@@ -138,6 +138,10 @@ a:hover {
 .modal-title {}
 
 @media (max-width: 959px){
+	.page-notfound > h5, .page-notfound > p{
+		font-size: 16px !important;
+	}
+
 	.userdata-table {
 		height: auto;
 	}
@@ -157,6 +161,10 @@ a:hover {
 }
 
 @media (max-width: 359px){
+	.page-notfound > h5, .page-notfound > p {
+		font-size: 12px !important;
+	}
+
 	.repository-tablecell {
 		font-size: 10px !important;
 		word-wrap: break-word !important;
