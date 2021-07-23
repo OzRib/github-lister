@@ -46,6 +46,10 @@
 	height: 36rem;
 }
 
+.repositories-header {
+	width: 100%;
+}
+
 .userdata-table {
 	height: 26rem;
 }
