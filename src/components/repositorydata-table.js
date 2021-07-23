@@ -3,8 +3,7 @@ import {
 	Container,
 	TableBody,
 	TableRow,
-	TableCell,
-	Typography
+	TableCell
 } from '@material-ui/core';
 
 export default function RepositorydataTable({data}){
