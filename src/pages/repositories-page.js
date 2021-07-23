@@ -31,6 +31,7 @@ export default function RepositoriesPage({match:{params}}){
 			container
 			direction="row"
 			justifyContent="space-between"
+			className="header"
 		>
 			<Grid item>
 				<TurnBack
