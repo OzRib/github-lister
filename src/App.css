@@ -16,6 +16,10 @@
 	font-weight: bold;
 }
 
+.header {
+	width: 100%;
+}
+
 .search {
 	padding: 2vh;
 }
@@ -44,10 +48,6 @@
 
 .repositories {
 	height: 36rem;
-}
-
-.repositories-header {
-	width: 100%;
 }
 
 .userdata-table {
